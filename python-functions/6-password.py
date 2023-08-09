@@ -23,5 +23,3 @@ def validate_password(password):
         return False
     
     return True
-
-print(validate_password('abc123'))
