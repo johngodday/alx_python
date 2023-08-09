@@ -1,7 +1,7 @@
 #!user/bin/python3
 def validate_password(password):
     if len(password) <  8:
-        return True
+        return False
     
     upper_check = False
     lower_check = False
@@ -14,11 +14,14 @@ def validate_password(password):
             lower_check = True
         elif i.isdigit():
             digit_check = True
+        
 
-    if not(upper_check and lower_check and digit_check):
+    if not (upper_check and lower_check and digit_check):
         return False
     
     if " " in password:
         return False
     
     return True
+
+print(validate_password('abc123'))
